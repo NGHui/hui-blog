@@ -13,7 +13,7 @@ import java.util.List;
 public class Blog {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
     private Long id;
 
     private String title;

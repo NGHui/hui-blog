@@ -12,7 +12,7 @@ import java.util.List;
 public class Tag {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
     private Long id;
     private String name;
 
