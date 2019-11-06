@@ -1,7 +1,7 @@
 package com.hui.web.admin;
 
-import com.lrm.po.User;
-import com.lrm.service.UserService;
+import com.hui.po.User;
+import com.hui.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
