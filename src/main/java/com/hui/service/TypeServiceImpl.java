@@ -44,6 +44,11 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.findAll(pageable);
     }
 
+    @Override
+    public List<Type> listType() {
+        return typeRepository.findAll();
+    }
+
 
     @Transactional
     @Override
@@ -62,10 +67,5 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public void deleteType(Long id) {
         typeRepository.delete(id);
-    }
-
-    @Override
-    public List<Type> listType() {
-        return typeRepository.findAll();
     }
 }

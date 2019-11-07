@@ -11,51 +11,17 @@ import java.util.List;
  */
 public interface TypeService {
 
-    /**
-     * 添加类型
-     * @param type
-     * @return
-     */
     Type saveType(Type type);
 
-    /**
-     * 更具id查找类型
-     * @param id
-     * @return
-     */
     Type getType(Long id);
 
-    /**
-     * 根据名字查询类型
-     * @param name
-     * @return
-     */
     Type getTypeByName(String name);
 
-    /**
-     * 类型分页
-     * @param pageable
-     * @return
-     */
     Page<Type> listType(Pageable pageable);
 
-    /**
-     * 类型跟新 先查询,后更新
-     * @param id
-     * @param type
-     * @return
-     */
+    List<Type> listType();
+
     Type updateType(Long id, Type type);
 
-    /**
-     * 根据id删除类型
-     * @param id
-     */
     void deleteType(Long id);
-
-    /**
-     * 查询所有的类型
-     * @return
-     */
-    List<Type> listType();
 }
