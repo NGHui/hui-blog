@@ -25,6 +25,16 @@ public class Comment {
     @ManyToOne
     private Blog blog;
 
+    private boolean adminComment;
+
+    public boolean isAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     @OneToMany(mappedBy = "parentComment")
     private List<Comment> replyComments = new ArrayList<>();
 
@@ -115,6 +125,10 @@ public class Comment {
                 ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", createTime=" + createTime +
+                ", blog=" + blog +
+                ", adminComment=" + adminComment +
+                ", replyComments=" + replyComments +
+                ", parentComment=" + parentComment +
                 '}';
     }
 }
