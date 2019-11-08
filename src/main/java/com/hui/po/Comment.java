@@ -25,21 +25,13 @@ public class Comment {
     @ManyToOne
     private Blog blog;
 
-    private boolean adminComment;
-
-    public boolean isAdminComment() {
-        return adminComment;
-    }
-
-    public void setAdminComment(boolean adminComment) {
-        this.adminComment = adminComment;
-    }
-
     @OneToMany(mappedBy = "parentComment")
     private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
     private Comment parentComment;
+
+    private boolean adminComment;
 
     public Comment() {
     }
@@ -116,6 +108,14 @@ public class Comment {
         this.parentComment = parentComment;
     }
 
+    public boolean isAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
@@ -126,9 +126,9 @@ public class Comment {
                 ", avatar='" + avatar + '\'' +
                 ", createTime=" + createTime +
                 ", blog=" + blog +
-                ", adminComment=" + adminComment +
                 ", replyComments=" + replyComments +
                 ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
                 '}';
     }
 }
