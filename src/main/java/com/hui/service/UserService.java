@@ -9,5 +9,11 @@ import com.hui.po.User;
  */
 public interface UserService {
 
+    /**
+     * 管理员登陆
+     * @param username
+     * @param password
+     * @return
+     */
     User checkUser(String username, String password);
 }

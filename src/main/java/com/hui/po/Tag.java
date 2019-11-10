@@ -15,10 +15,14 @@ public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
+    /*标签的ID*/
     private Long id;
+
+    /*标签的名字*/
     private String name;
 
     @ManyToMany(mappedBy = "tags")
+    /*标签的博客 一对多 一个标签可以有多个博文用*/
     private List<Blog> blogs = new ArrayList<>();
 
     public Tag() {

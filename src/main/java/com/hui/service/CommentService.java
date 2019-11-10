@@ -11,7 +11,17 @@ import java.util.List;
  */
 public interface CommentService {
 
+    /**
+     * 博客评论列表
+     * @param blogId
+     * @return
+     */
     List<Comment> listCommentByBlogId(Long blogId);
 
+    /**
+     * 发表评论
+     * @param comment
+     * @return
+     */
     Comment saveComment(Comment comment);
 }

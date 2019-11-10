@@ -16,42 +16,71 @@ public class Blog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
+    /*博文ID*/
     private Long id;
 
+    /*博文标题*/
     private String title;
 
     @Basic(fetch = FetchType.LAZY)
     @Lob
+    /*博文内容*/
     private String content;
+
+    /*博文首图*/
     private String firstPicture;
+
+    /*博文标签*/
     private String flag;
+
+    /*博文阅读数*/
     private Integer views;
+
+    /*博文是否开启鉴赏 true 开启 false 不开*/
     private boolean appreciation;
+
+    /*博文是否开启转载声明*/
     private boolean shareStatement;
+
+    /*博文是否开启评论*/
     private boolean commentabled;
+
+    /*博文是否发布*/
     private boolean published;
+
+    /*博文是否推荐*/
     private boolean recommend;
+
     @Temporal(TemporalType.TIMESTAMP)
+    /*博文的创建时间*/
     private Date createTime;
+
     @Temporal(TemporalType.TIMESTAMP)
+    /*博文的更新时间*/
     private Date updateTime;
 
     @ManyToOne
+    /*博文分类*/
     private Type type;
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
+    /*博文标签*/
     private List<Tag> tags = new ArrayList<>();
 
 
     @ManyToOne
+    /*博文作者*/
     private User user;
 
     @OneToMany(mappedBy = "blog")
+    /*博文评论*/
     private List<Comment> comments = new ArrayList<>();
 
     @Transient
+    /*博文对应的标签的id*/
     private String tagIds;
 
+    /*博文的描述*/
     private String description;
 
     public Blog() {

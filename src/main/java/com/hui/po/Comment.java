@@ -16,23 +16,38 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
+    /*品论的id*/
     private Long id;
+
+    /*评论的名字*/
     private String nickname;
+
+    /*评论的邮箱*/
     private String email;
+
+    /*评论的内容*/
     private String content;
+
+    /*评论的头像-->默认头像*/
     private String avatar;
+
     @Temporal(TemporalType.TIMESTAMP)
+    /*品论的创建的时间*/
     private Date createTime;
 
     @ManyToOne
+    /*评论的博客 ---->属于那个博客*/
     private Blog blog;
 
     @OneToMany(mappedBy = "parentComment")
+    /*回复的评论*/
     private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
+    /*回复评论的父ID --->父ID为Null 就是一级评论 不是Null就是二级评论*/
     private Comment parentComment;
 
+    /*是否是管理员评论标记 -->session不是null管理员评论,否者就是普通用户评论*/
     private boolean adminComment;
 
     public Comment() {

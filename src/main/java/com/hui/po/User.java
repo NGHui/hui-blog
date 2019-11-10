@@ -16,19 +16,37 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
+    /*管理员ID*/
     private Long id;
+
+    /*管理员昵称*/
     private String nickname;
+
+    /*管理员登陆账号*/
     private String username;
+
+    /*管理员登陆密码*/
     private String password;
+
+    /*管理员邮箱*/
     private String email;
+
+    /*管理员头像*/
     private String avatar;
+
+    /*管理员分类ID*/
     private Integer type;
+
     @Temporal(TemporalType.TIMESTAMP)
+    /*管理员创建时间*/
     private Date createTime;
+
     @Temporal(TemporalType.TIMESTAMP)
+    /*管理员更新时间*/
     private Date updateTime;
 
     @OneToMany(mappedBy = "user")
+    /*管理员博文*/
     private List<Blog> blogs = new ArrayList<>();
 
     public User() {

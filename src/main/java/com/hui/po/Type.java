@@ -17,11 +17,15 @@ public class Type {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //主键自增id
+    /*分类ID*/
     private Long id;
+
     @NotBlank(message = "分类名称不能为空")
+    /*分类的名字*/
     private String name;
 
     @OneToMany(mappedBy = "type")
+    /*分类的博文 一对多*/
     private List<Blog> blogs = new ArrayList<>();
 
     public Type() {
