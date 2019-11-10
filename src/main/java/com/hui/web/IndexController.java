@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by limi on 2017/10/13.
+ * @author 辉
+ * 座右铭:坚持总能遇见更好的自己!
+ * @date 2019/11/10
  */
 @Controller
 public class IndexController {
@@ -54,6 +56,12 @@ public class IndexController {
     public String blog(@PathVariable Long id,Model model) {
         model.addAttribute("blog", blogService.getAndConvert(id));
         return "blog";
+    }
+
+    @GetMapping("/footer/newblog")
+    public String newblogs(Model model) {
+        model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
+        return "_fragments :: newblogList";
     }
 
 }

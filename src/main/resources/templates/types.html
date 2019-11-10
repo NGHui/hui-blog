@@ -33,7 +33,7 @@
   </nav>
 
   <!--中间内容-->
-  <div  class="m-container-small m-padded-tb-big">
+  <div  class="m-container-small m-padded-tb-big animated fadeIn">
     <div class="ui container">
       <!--header-->
       <div class="ui top attached segment">
@@ -95,10 +95,10 @@
       <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
         <div class="ui middle aligned two column grid">
           <div class="column">
-            <a href="#" th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
+            <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}-1)}"  th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
           </div>
           <div class="right aligned column">
-            <a href="#" th:href="@{/(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
+            <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
         <div class="three wide column">
           <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
           <div class="ui inverted link list">
-            <a href="#" class="item m-text-thin">Email：lirenmi@163.com</a>
+            <a href="#" class="item m-text-thin">Email：NGHui@163.com</a>
             <a href="#" class="item m-text-thin">QQ：865729312</a>
           </div>
         </div>
@@ -140,7 +140,7 @@
         </div>
       </div>
       <div class="ui inverted section divider"></div>
-      <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+      <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 NGHui Designed by NGHui</p>
     </div>
 
   </footer>

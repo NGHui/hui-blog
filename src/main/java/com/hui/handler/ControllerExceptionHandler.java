@@ -11,7 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by limi on 2017/10/13.
+ * @author 辉
+ * 座右铭:坚持总能遇见更好的自己!
+ * @date 2019/11/10
  */
 @ControllerAdvice
 public class ControllerExceptionHandler {

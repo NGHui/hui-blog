@@ -15,7 +15,9 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import java.util.*;
 
 /**
- * Created by limi on 2017/10/22.
+ * @author 辉
+ * 座右铭:坚持总能遇见更好的自己!
+ * @date 2019/11/10
  */
 public class MarkdownUtils {
 
