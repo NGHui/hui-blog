@@ -192,3 +192,7 @@
 2019-11-10 18:50:39.915  INFO 95808 --- [http-nio-8080-exec-1] com.hui.aspect.LogAspect                 : Result : blog
 2019-11-10 18:50:40.272  INFO 95808 --- [http-nio-8080-exec-3] com.hui.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hui.web.IndexController.newblogs', args=[{}]}
 2019-11-10 18:50:40.278  INFO 95808 --- [http-nio-8080-exec-3] com.hui.aspect.LogAspect                 : Result : _fragments :: newblogList
+2019-11-10 18:56:50.547  INFO 95808 --- [http-nio-8080-exec-5] com.hui.aspect.LogAspect                 : Request : {url='http://hui.free.idcfengye.com/', ip='127.0.0.1', classMethod='com.hui.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-10 18:56:50.593  INFO 95808 --- [http-nio-8080-exec-5] com.hui.aspect.LogAspect                 : Result : index
+2019-11-10 18:56:59.281  INFO 95808 --- [http-nio-8080-exec-6] com.hui.aspect.LogAspect                 : Request : {url='http://hui.free.idcfengye.com/footer/newblog', ip='127.0.0.1', classMethod='com.hui.web.IndexController.newblogs', args=[{}]}
+2019-11-10 18:56:59.293  INFO 95808 --- [http-nio-8080-exec-6] com.hui.aspect.LogAspect                 : Result : _fragments :: newblogList
